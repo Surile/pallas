@@ -1,7 +1,9 @@
 <template>
-	<view class="container">
+	<view class="container ty-row__direction--column ty-row__justify--between">
 		<Header></Header>
-		<slot></slot>
+		<view class="content">
+			<slot></slot>
+		</view>
 		<Footer></Footer>
 	</view>
 </template>
@@ -26,8 +28,10 @@ export default {
 <style lang="scss">
 @import '@/styles/index.scss';
 .container{
-	@include display-flex;
-	@include justify-content()
 	margin: 0px auto;
+}
+.content{
+	padding: 0px 135px;
+	margin-bottom: 20px;
 }
 </style>

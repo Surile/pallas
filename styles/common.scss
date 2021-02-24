@@ -1,9 +1,9 @@
-@import './mixin.scss','./theme.scss';
+@import './mixin.scss';
 
 .ty-row{
 	@include display-flex;
 	
-	width: 100%;
+	// width: 100%;
 	
 	&__direction {
 		&--row {
