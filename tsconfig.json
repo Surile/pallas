@@ -13,10 +13,10 @@
     "skipLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": [
-        "./src/*"
-      ]
+      "@/*": ["./*"],
+      "@/components":["./components/*"]
     },
+    "typeRoots":["./types"],
     "lib": [
       "esnext",
       "dom",
