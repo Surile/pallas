@@ -10,7 +10,7 @@
 		<view class="tips-container">
 			<view class="tips-header">上传提示</view>
 			<view class="tips-content">
-				<slot name="tips-item"></slot>
+				<slot name="tips"></slot>
 			</view>
 		</view>
 	</view>
@@ -60,17 +60,6 @@ export default {
 		border-top-left-radius:3px;
 		border-top-right-radius:3px;
 		background-color: $color-brand;
-	}
-	.tips-content{
-		.tips-item{
-			position: relative;
-			display: block;
-			padding: 10px 15px;
-			margin-bottom: -1px;
-			background-color: #fff;
-			border: 1px solid #ddd;
-			font-size: 14px;
-		}
 	}
 }
 </style>
