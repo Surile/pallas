@@ -1,0 +1,9 @@
+{
+  "name": "verifyImg",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "baidu-aip-sdk": "^2.4.6"
+  }
+}
