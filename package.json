@@ -1,0 +1,11 @@
+{
+  "name": "pallas",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Surile/pallas.git",
+  "author": "夜雨 <mhecy98@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "clipboard": "^2.0.6"
+  }
+}

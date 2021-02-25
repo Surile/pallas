@@ -65,3 +65,8 @@
 		@include flex-wrap(wrap-reverse);
 	}
 }
+
+.active {
+	background-color: #ddd !important;
+	border-bottom-color: #000;
+}
