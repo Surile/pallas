@@ -1,6 +1,6 @@
 <template>
 	<view class="navbar-container ty-row ty-row__direction--row ty-row__align--center">
-		<view class="navbar-header">
+		<view @click="onHome" class="navbar-header">
 			梦幻图床
 		</view>
 		<view class="navbar-collapse collapse navbar-responsive-collapse ty-row ty-row__align--center ty-row__justify--between">
@@ -48,6 +48,11 @@ export default {
 			uni.showToast({
 				title:"正在开发...",
 				duration:2000
+			})
+		},
+		onHome(){
+			uni.navigateTo({
+				url:"/pages/index/index"
 			})
 		}
 	}
