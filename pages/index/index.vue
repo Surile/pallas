@@ -4,17 +4,14 @@
 			<Card>
 				<template v-slot:upload>
 					<view class="content">
-						<view v-if="percent > 0" class="progressBar">
-							 <progress :percent="percent" show-info stroke-width="30" activeColor="#009688"/>
-						</view>
 						<view class="tips-text">选择一个文件上传</view>
 						<button v-on:click="onChooseImage" class="upload-btn">立即上传</button>
 					</view>
 				</template>
 				<template v-slot:tips>
-					<view class="tips-item">**您的IP是183.193.18.85，请不要上传违规文件！</view>
+					<!-- <view class="tips-item">**您的IP是183.193.18.85，请不要上传违规文件！</view> -->
 					<view class="tips-item">**上传无格式限制，当前服务器单个文件上传最大支持<strong>100M</strong>!</view>
-					<view class="tips-item">**当前网站已开启视频文件审核，如果上传的是视频文件，需要等待审核通过后才能下载和播放。</view>
+					<!-- <view class="tips-item">**当前网站已开启视频文件审核，如果上传的是视频文件，需要等待审核通过后才能下载和播放。</view> -->
 				</template>
 			</Card>
 		</view>
@@ -36,12 +33,21 @@ export default {
 			percent:0
 		}
 	},
-	onLoad() {
-
-	},
 	methods: {
 		onChooseImage(){
 			const that = this
+			// uni.chooseFile({
+			// 	sizeType:["original"],
+			// 	success: (res) => {
+			// 		if(!res.tempFilePaths.length){
+			// 			return
+			// 		}
+					
+			// 		res.tempFiles.map(async (item) => {
+			// 			that.imgs = await that.onUploadFile(item)
+			// 		})
+			// 	}
+			// })
 			uni.chooseImage({
 				sizeType:["original"],
 				success: (res) => {
@@ -58,22 +64,24 @@ export default {
 		async onUploadFile(file){
 			let result = []
 			const _self = this
+			uni.showLoading({
+				mask:true,
+			})
 			const res = await uniCloud.uploadFile({
 				filePath:file.path,
 				cloudPath:file.name,
-				onUploadProgress:(res) => {
-					const progress = Math.round((res.loaded * 100) / res.total);
-					_self.percent = progress;
-					if(progress === 100){
-						alert("上传成功")
-						uni.navigateTo({
-							url:"/pages/detail/index?id=1&name=uniapp"
-						})
-					}		
-				}
 			})
-			result.push({ url:res.fileID })
-			return result
+			uniCloud.callFunction({
+				name:"add",
+				data:{
+					url:res.fileID
+				}
+			}).then((data) => {
+				uni.hideLoading()
+				uni.navigateTo({
+					url:`../detail/index?id=${data.result.id}`
+				})
+			})
 		},
 	}
 }
@@ -84,6 +92,7 @@ export default {
 .container{
 	flex: 1;
 	.content{
+		width: 100%;
 		padding: 100px 30px;
 	}
 	.upload-container{
@@ -103,6 +112,7 @@ export default {
 			text-align: center;
 		}
 		.upload-btn{
+			width: 140px;
 			color: rgba(255,255,255,.84);
 			font-size: 20px;
 			text-align: center;
