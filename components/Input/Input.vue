@@ -2,9 +2,9 @@
 	<view class="container ty-row ty-row__align--center">
 		<label>{{ name }}</label>
 		<view class="input-group tr-row tr-row__direction--row ty-row__align--center">
-			<input id="input" readonly="readonly" disabled :value="value"/>
+			<input id="input" disabled :value="value"/>
 			<view class="btn-container">
-				<view class="input-group-btn" ref="copy" data-clipboard-action="copy" data-clipboard-target="#input" @click="onCopyLink">复制</view>
+				<view class="input-group-btn" :data-clipboard-text="value" @click="onCopyLink">复制</view>
 			</view>
 		</view>
 	</view>
@@ -30,11 +30,13 @@
 				
 				let clipboard = _this.copyBtn;				
 				
-				clipboard.on('success', function() {
+				clipboard.on('success', function(e) {
+					// console.log(e)
 					uni.showToast({
 						title:"复制成功！",
 						icon:"none"
 					})
+					e.clearSelection();
 				});
 				
 				clipboard.on('error', function() {

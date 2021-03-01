@@ -1,13 +1,13 @@
 <template>
 	<view class="navbar-container ty-row ty-row__direction--row ty-row__align--center">
 		<view class="navbar-header">
-			彩虹云图床
+			梦幻图床
 		</view>
 		<view class="navbar-collapse collapse navbar-responsive-collapse ty-row ty-row__align--center ty-row__justify--between">
 			<view class="navbar-items ty-row ty-row__align--center">
 				<view v-for="(item,index) in menu" :key="index" v-on:click="item.onClick" class="navbar-item">{{ item.name }}</view>
 			</view>
-			<view>我的文件</view>
+			<view @click="onViewMe">我的文件</view>
 		</view>
 	</view>
 </template>
@@ -31,13 +31,25 @@ export default {
 					id:2,
 					name:"文件列表",
 					onClick:() => {
-						uni.navigateTo({
-							url:"/pages/list/index"
+						// uni.navigateTo({
+						// 	url:"/pages/list/index"
+						// })
+						uni.showToast({
+							title:"正在开发...",
+							duration:2000
 						})
 					}
 				},
 			]
 		};
+	},
+	methods:{
+		onViewMe(){
+			uni.showToast({
+				title:"正在开发...",
+				duration:2000
+			})
+		}
 	}
 }
 </script>
