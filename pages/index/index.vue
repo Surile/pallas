@@ -33,6 +33,8 @@ export default {
 			percent:0
 		}
 	},
+	onLoad() {
+	},
 	methods: {
 		onChooseImage(){
 			const that = this
@@ -67,16 +69,21 @@ export default {
 			uni.showLoading({
 				mask:true,
 			})
+			
 			const res = await uniCloud.uploadFile({
 				filePath:file.path,
 				cloudPath:file.name,
 			})
+	
 			uniCloud.callFunction({
-				name:"add",
+				name:"server",
 				data:{
-					url:res.fileID
+					action:"image/add",
+					data:{
+						url:res.fileID
+					}
 				}
-			}).then((data) => {
+			}).then(data => {
 				uni.hideLoading()
 				uni.navigateTo({
 					url:`../detail/index?id=${data.result.id}`
