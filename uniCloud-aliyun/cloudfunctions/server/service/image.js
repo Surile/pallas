@@ -1,3 +1,8 @@
+/*
+ * @Author: 夜雨
+ * @Date: 2021-03-04 18:34:01
+ * @Description: Do not edit
+ */
 const Service = require('uni-cloud-router').Service
 
 module.exports = class HelloService extends Service {

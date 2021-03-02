@@ -72,12 +72,14 @@ export default {
 	},
 	onLoad(options) {
 		uniCloud.callFunction({
-			name:"detail",
+			name:"server",
 			data:{
-				id:options.id
+				action:"image/detail",
+				data:{
+					id:options.id
+				}
 			}
 		}).then(data => {
-			console.log(data)
 			this.data = data.result.data[0]
 		})
 	},
@@ -93,12 +95,15 @@ export default {
 		},
 		onRemoveImage(){
 			uniCloud.callFunction({
-				name:"remove",
+				name:"server",
 				data:{
-					id:`${this.data._id}`
+					action:"image/remove",
+					data:{
+						id:`${this.data._id}`
+					}
 				}
-			}).then((result) => {
-				if (result.result.deleted === 1){
+			}).then(data => {
+				if (data.result.deleted === 1){
 					uni.navigateBack()
 				}
 			})

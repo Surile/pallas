@@ -77,6 +77,10 @@
         },
         "uniStatistics" : {
             "enable" : true
-        }
+        },
+        "router" : {
+            "mode" : "history"
+        },
+        "domain" : "oss.surile.cn"
     }
 }
