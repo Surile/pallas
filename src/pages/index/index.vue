@@ -8,23 +8,23 @@
 </template>
 
 <script lang="ts">
-    import Vue from 'vue';
-	export default Vue.extend({
-		data() {
-			return {
-				title: 'Hello'
-			}
-		},
-		onLoad() {
+import { Component,Vue } from 'vue-property-decorator'
 
-		},
-		methods: {
 
-		}
-	});
+@Component
+export default class Index extends Vue{
+  public title:string = "测试"
+
+	mounted(){}
+
+	onLoad(){
+		console.log(this.title)
+	}
+
+}
 </script>
 
-<style>
+<style lang="scss">
 	.content {
 		display: flex;
 		flex-direction: column;
