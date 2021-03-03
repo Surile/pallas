@@ -62,6 +62,7 @@ export default {
 					})
 				}
 			})
+			
 		},
 		async onUploadFile(file){
 			let result = []
