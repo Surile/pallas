@@ -5,6 +5,7 @@
   "license": "MIT",
   "dependencies": {
     "uni-cloud-router": "^0.0.9",
-    "uni-id": "file:../../../uni_modules/uni-id/uniCloud/cloudfunctions/common/uni-id"
+    "uni-id": "file:../../../uni_modules/uni-id/uniCloud/cloudfunctions/common/uni-id",
+    "nodemailer": "^6.5.0"
   }
 }
