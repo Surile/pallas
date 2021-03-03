@@ -17,4 +17,5 @@ export default Vue.extend({
 
 <style lang="scss">
 /*每个页面公共css */
+@import url("@/styles/index.scss");
 </style>
