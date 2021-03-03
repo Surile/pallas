@@ -1,11 +1,11 @@
 {
-	"name" : "uni-file-admin",
-	"version" : "1.0.0",
-	"main" : "index.js",
-	"license" : "MIT",
-	"dependencies" : 
-	{
-		"uni-cloud-router" : "^0.0.10",
-		"uni-id" : "file:../../../uni_modules/uni-id/uniCloud/cloudfunctions/common/uni-id"
+	"name": "uni-file-admin",
+	"version": "1.0.0",
+	"main": "index.js",
+	"license": "MIT",
+	"dependencies": {
+		"nodemailer": "^6.5.0",
+		"uni-cloud-router": "^0.0.10",
+		"uni-id": "file:../../../uni_modules/uni-id/uniCloud/cloudfunctions/common/uni-id"
 	}
 }
