@@ -43,49 +43,31 @@ export default class Index extends Vue {
 				})
 			}
 		})
-		
 	}
 	async onUploadFile(file:any){
-		let result = []
-		const _self = this
 		uni.showLoading({
 			mask:true,
 		})
 
-		// uni.uploadFile({
-		// 	url:"https://f50391d2-9b7a-49f5-8bbb-7f2c6d5f7b8d.bspapp.com/image/up"
-		// })
-
-		uni.request({
-			url:"https://f50391d2-9b7a-49f5-8bbb-7f2c6d5f7b8d.bspapp.com/http/api/image/add",
-			method:"POST",
-			data:{
-				url:"111"
-			},
-			success:(res) => {
-				console.log(res)
-			}
+		const res = await uniCloud.uploadFile({
+			filePath:file.path,
+			cloudPath:file.name,
 		})
-		
-		// const res = await uniCloud.uploadFile({
-		// 	filePath:file.path,
-		// 	cloudPath:file.name,
-		// })
 
-		// uniCloud.callFunction({
-		// 	name:"server",
-		// 	data:{
-		// 		action:"image/add",
-		// 		data:{
-		// 			url:res.fileID
-		// 		}
-		// 	}
-		// }).then((data:any) => {
-		// 	uni.hideLoading()
-		// 	uni.navigateTo({
-		// 		url:`../detail/index?id=${data.result.id}`
-		// 	})
-		// })
+		uniCloud.callFunction({
+			name:"server",
+			data:{
+				action:"image/add",
+				data:{
+					url:res.fileID
+				}
+			}
+		}).then((data:any) => {
+			uni.hideLoading()
+			uni.navigateTo({
+				url:`../detail/index?id=${data.result.id}`
+			})
+		})
 	}
 }
 </script>
