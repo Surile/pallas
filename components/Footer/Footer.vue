@@ -18,7 +18,7 @@ export default {
 
 <style lang="scss">
 .footer-container{
-	padding: 0 135px;
+	// padding: 0 135px;
 	margin-bottom: 10px;
 	text {
 		color: #777;
