@@ -12,5 +12,14 @@
 	],
 	"globalStyle": {
 		"navigationStyle":"custom"
+	},
+	"topWindow": {
+		"path": "windows/top-window.vue",
+		"style": {
+			"height": "60px"
+		},
+		"matchMedia": {
+			"minWidth": 20
+		}
 	}
 }
