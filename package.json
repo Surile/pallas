@@ -43,9 +43,6 @@
     "prettier": "prettier --write",
     "lint": "eslint --fix"
   },
-  "hooks": {
-    "pre-commit": "yarn test"
-  },
   "dependencies": {
     "@dcloudio/uni-app-plus": "^2.0.0-31220210205004",
     "@dcloudio/uni-h5": "^2.0.0-31220210205004",
@@ -105,6 +102,19 @@
     "sass-loader": "^7.3.1",
     "typescript": "^3.0.0",
     "vue-template-compiler": "^2.6.11"
+  },
+  "hooks": {
+    "pre-commit": {}
+  },
+  "lint-staged": {
+    "*.{js,vue,json,graphql,md,ts}": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.{js,vue,ts}": [
+      "eslint --fix",
+      "git add"
+    ]
   },
   "browserslist": [
     "Android >= 4",
