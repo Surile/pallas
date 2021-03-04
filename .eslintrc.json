@@ -12,8 +12,7 @@
     "plugin:vue/recommended",
     "eslint:recommended",
     "prettier",
-    "prettier/vue",
-    "@vue/typescript"
+    "prettier/vue"
   ],
   "rules": {
     "vue/require-prop-types": 0,
