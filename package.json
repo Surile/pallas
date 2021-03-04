@@ -39,9 +39,7 @@
     "test:h5": "cross-env UNI_PLATFORM=h5 jest -i",
     "test:ios": "cross-env UNI_PLATFORM=app-plus UNI_OS_NAME=ios jest -i",
     "test:mp-baidu": "cross-env UNI_PLATFORM=mp-baidu jest -i",
-    "test:mp-weixin": "cross-env UNI_PLATFORM=mp-weixin jest -i",
-    "prettier": "prettier --write",
-    "lint": "eslint --fix"
+    "test:mp-weixin": "cross-env UNI_PLATFORM=mp-weixin jest -i"
   },
   "dependencies": {
     "@dcloudio/uni-app-plus": "^2.0.0-31220210205004",
@@ -104,16 +102,14 @@
     "vue-template-compiler": "^2.6.11"
   },
   "hooks": {
-    "pre-commit": {}
+    "pre-commit": "lint-staged"
   },
   "lint-staged": {
     "*.{js,vue,json,graphql,md,ts}": [
-      "prettier --write",
-      "git add"
+      "prettier --write"
     ],
     "*.{js,vue,ts}": [
-      "eslint --fix",
-      "git add"
+      "eslint --fix"
     ]
   },
   "browserslist": [
