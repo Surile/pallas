@@ -5,9 +5,7 @@
         <template v-slot:upload>
           <view class="content">
             <view class="tips-text">选择一个文件上传</view>
-            <button class="upload-btn" @:click="onChooseImage">
-              立即上传
-            </button>
+            <button class="upload-btn" @:click="onChooseImage">立即上传</button>
           </view>
         </template>
         <template v-slot:tips>
@@ -36,34 +34,26 @@ export default class Index extends Vue {
   onChooseImage() {
     const that = this
 
-
-
-
-
-
-
-
-
     uni.chooseImage({
       sizeType: ['original'],
       success: (res: any) => {
         if (!res.tempFilePaths.length) {
-                                return
+          return
         }
 
         res.tempFiles.map(async (item: any) => {
-                   await that.onUploadFile(item)
-             })
-       },
+          await that.onUploadFile(item)
+        })
+      },
     })
-  }       
+  }
   async onUploadFile(file: any) {
-       uni.showLoading({
+    uni.showLoading({
       mask: true,
     })
 
     const res = await uniCloud.uploadFile({
-            filePath: file.path,
+      filePath: file.path,
       cloudPath: file.name,
     })
 
