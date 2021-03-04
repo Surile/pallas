@@ -39,7 +39,8 @@
     "test:h5": "cross-env UNI_PLATFORM=h5 jest -i",
     "test:ios": "cross-env UNI_PLATFORM=app-plus UNI_OS_NAME=ios jest -i",
     "test:mp-baidu": "cross-env UNI_PLATFORM=mp-baidu jest -i",
-    "test:mp-weixin": "cross-env UNI_PLATFORM=mp-weixin jest -i"
+    "test:mp-weixin": "cross-env UNI_PLATFORM=mp-weixin jest -i",
+    "lint:eslint": "eslint --fix"
   },
   "dependencies": {
     "@dcloudio/uni-app-plus": "^2.0.0-31220210205004",
@@ -108,8 +109,8 @@
     }
   },
   "lint-staged": {
-    "*.{js,vue,ts}": "eslint --fix",
-    "*.{js,vue,json,md,ts}": "prettier --write"
+    "*.{js,vue,json,graphql,md,ts}": "prettier --write .",
+    "*.{js,vue,ts}": "eslint --fix"
   },
   "browserslist": [
     "Android >= 4",
