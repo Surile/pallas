@@ -109,7 +109,7 @@
   },
   "lint-staged": {
     "*.{js,vue,ts}": "eslint --fix",
-    "/src/*/*.{js,vue,json,md,ts}": "prettier --write"
+    "*.{js,vue,json,md,ts}": "prettier --write"
   },
   "browserslist": [
     "Android >= 4",
