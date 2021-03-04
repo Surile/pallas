@@ -41,6 +41,19 @@
     "test:mp-baidu": "cross-env UNI_PLATFORM=mp-baidu jest -i",
     "test:mp-weixin": "cross-env UNI_PLATFORM=mp-weixin jest -i"
   },
+  "husky":{
+    "hooks":{
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged":{
+    "linters": {
+      "*.{js,vue,json,graphql,md,ts}": [
+        "prettier --write",
+        "git add"
+      ]
+    }
+  },
   "dependencies": {
     "@dcloudio/uni-app-plus": "^2.0.0-31220210205004",
     "@dcloudio/uni-h5": "^2.0.0-31220210205004",
@@ -86,6 +99,7 @@
     "cross-env": "^7.0.2",
     "husky": "^5.1.3",
     "jest": "^25.4.0",
+    "lint-staged": "^10.5.4",
     "mini-types": "*",
     "miniprogram-api-typings": "*",
     "node-sass": "^4.14.1",
