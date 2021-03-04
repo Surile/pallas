@@ -47,16 +47,14 @@
     }
   },
   "lint-staged": {
-    "linters": {
-      "*.{js,vue,json,graphql,md,ts}": [
-        "prettier --write",
-        "git add"
-      ],
-      "*.{js,vue,ts}": [
-        "eslint --fix",
-        "git add"
-      ]
-    }
+    "*.{js,vue,json,graphql,md,ts}": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.{js,vue,ts}": [
+      "eslint --fix",
+      "git add"
+    ]
   },
   "dependencies": {
     "@dcloudio/uni-app-plus": "^2.0.0-31220210205004",
