@@ -102,6 +102,7 @@
     "@vue/cli-plugin-typescript": "*",
     "@vue/cli-service": "~4.5.0",
     "@vue/eslint-config-typescript": "^7.0.0",
+    "babel-eslint": "^10.1.0",
     "babel-plugin-import": "^1.11.0",
     "cross-env": "^7.0.2",
     "eslint": "^7.21.0",
