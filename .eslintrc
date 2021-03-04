@@ -1,0 +1,28 @@
+{
+  "root": true,
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "globals": {
+    "uni":"readonly",
+    "uniCloud":"readonly"
+  },
+  "extends": [
+    "plugin:vue/recommended",
+    "eslint:recommended",
+    "prettier",
+    "prettier/vue",
+    "@vue/typescript"
+  ],
+  "rules": {
+    "vue/require-prop-types": 0,
+    "no-unused-vars": 0,
+    "no-console": 0,
+    "no-debugger": 0,
+    "vue/no-v-html": 0
+  },
+  "parserOptions": {
+    "parser": "@typescript-eslint/parser"
+  }
+}

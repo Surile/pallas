@@ -5,7 +5,7 @@
         <template v-slot:upload>
           <view class="content">
             <view class="tips-text">选择一个文件上传</view>
-            <button v-on:click="onChooseImage" class="upload-btn">
+            <button class="upload-btn" @:click="onChooseImage">
               立即上传
             </button>
           </view>
