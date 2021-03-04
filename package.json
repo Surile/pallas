@@ -6,6 +6,8 @@
   "author": "夜雨 <mhecy98@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "clipboard": "^2.0.6"
+    "@types/clipboard": "^2.0.1",
+    "clipboard": "^2.0.6",
+    "uview-ui": "^1.8.3"
   }
 }

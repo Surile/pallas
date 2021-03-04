@@ -1,15 +1,18 @@
-import Vue from 'vue'
-import App from './App'
-import clipboard from 'clipboard'
+import Vue from "vue";
+import App from "./App";
+import clipboard from "clipboard";
+import uView from "uview-ui";
 
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
 
 Vue.prototype.clipboard = clipboard;
 
-App.mpType = 'app'
+Vue.use(uView);
+
+App.mpType = "app";
 
 const app = new Vue({
-    ...App
-})
+  ...App,
+});
 
-app.$mount()
+app.$mount();
