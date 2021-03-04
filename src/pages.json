@@ -1,16 +1,16 @@
 {
-	"pages": [
-		{
-			"path": "pages/index/index"
-		},
-		{
-			"path":"pages/detail/index"
-		},
-		{
-			"path":"pages/list/index"
-		}
-	],
-	"globalStyle": {
-		"navigationStyle":"custom"
-	}
+  "pages": [
+    {
+      "path": "pages/index/index"
+    },
+    {
+      "path": "pages/detail/index"
+    },
+    {
+      "path": "pages/list/index"
+    }
+  ],
+  "globalStyle": {
+    "navigationStyle": "custom"
+  }
 }

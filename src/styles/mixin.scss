@@ -1,9 +1,9 @@
 @mixin display-flex {
-	display: flex;
+  display: flex;
 }
 
-@mixin flex-wrap($value:nowrap) {
-	flex-wrap: $value;
+@mixin flex-wrap($value: nowrap) {
+  flex-wrap: $value;
 }
 
 @mixin align-items($value: stretch) {

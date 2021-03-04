@@ -8,7 +8,7 @@
     "moduleResolution": "node",
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "experimentalDecorators":true,
+    "experimentalDecorators": true,
     "sourceMap": true,
     "skipLibCheck": true,
     "baseUrl": ".",
@@ -19,21 +19,10 @@
       "mini-types"
     ],
     "paths": {
-      "@/*": [
-        "./src/*"
-      ],
-      "@/components":["./src/components/index"]
+      "@/*": ["./src/*"],
+      "@/components": ["./src/components/index"]
     },
-    "lib": [
-      "esnext",
-      "dom",
-      "dom.iterable",
-      "scripthost"
-    ]
+    "lib": ["esnext", "dom", "dom.iterable", "scripthost"]
   },
-  "exclude": [
-    "node_modules",
-    "unpackage",
-    "src/**/*.nvue"
-  ]
+  "exclude": ["node_modules", "unpackage", "src/**/*.nvue"]
 }

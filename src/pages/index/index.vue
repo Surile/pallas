@@ -32,8 +32,6 @@ import { BaseLayout, Card } from '@/components'
 })
 export default class Index extends Vue {
   onChooseImage() {
-    const that = this
-
     uni.chooseImage({
       sizeType: ['original'],
       success: (res: any) => {
@@ -42,7 +40,7 @@ export default class Index extends Vue {
         }
 
         res.tempFiles.map(async (item: any) => {
-          await that.onUploadFile(item)
+          await this.onUploadFile(item)
         })
       },
     })
@@ -54,7 +52,7 @@ export default class Index extends Vue {
 
     const res = await uniCloud.uploadFile({
       filePath: file.path,
-      				cloudPath: file.name,
+      cloudPath: file.name,
     })
 
     uniCloud
@@ -69,7 +67,7 @@ export default class Index extends Vue {
       })
       .then((data: any) => {
         uni.hideLoading()
-	        uni.navigateTo({
+        uni.navigateTo({
           url: `../detail/index?id=${data.result.id}`,
         })
       })
