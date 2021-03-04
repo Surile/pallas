@@ -1,3 +1,8 @@
+/*
+ * @Author: 夜雨
+ * @Date: 2021-03-04 18:36:09
+ * @Description: 图片服务
+ */
 const { Controller } = require('uni-cloud-router')
 
 module.exports = class ImageController extends Controller {

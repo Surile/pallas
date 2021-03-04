@@ -1,0 +1,42 @@
+/**
+ * Purple - FFC701 主题
+ */
+
+/* The Color of FFC701 Brand */
+$color-brand: #009688;
+$color-brand-light: #00aa9a;
+$color-brand-dark: #cc9f01;
+
+/* 辅助色 */
+$color-success: #0c8;
+$color-error: #fa5b5b;
+$color-warning: #ffd400;
+$color-info: #4d88ff;
+
+/* 文本颜色 */
+$color-text-base: #1d1f2b;
+$color-text-title: #1d1f2b; // 文章标题
+
+/* 组件样式 */
+$at-button-border-color-primary: transparent;
+$at-button-bg: linear-gradient(90deg, #5274a0, #27497c 100%);
+
+$at-message-bg-color: #95969f;
+
+$at-tag-color: $color-text-base;
+$at-tag-color-primary: $color-brand-light;
+$at-tag-color-primary-active: $color-brand-light;
+$at-tag-border-color: #bdbec3;
+$at-tag-bg-color: #fff;
+$at-tag-bg-color-primary: #e9f3ff;
+$at-tag-bg-color-primary-active: #e9f3ff;
+
+$at-range-track-bg-color: $color-brand-light;
+
+$at-indexes-nav-color: $color-text-title;
+
+$at-steps-bg-color-active: $color-brand-light;
+
+$at-timeline-dot-border-color: $color-brand;
+
+$at-calendar-day-color: $color-text-base;
