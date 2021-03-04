@@ -35,6 +35,10 @@ import { BaseLayout, Card } from '@/components'
 export default class Index extends Vue {
   onChooseImage() {
     const that = this
+
+
+
+    
     uni.chooseImage({
       sizeType: ['original'],
       success: (res: any) => {
