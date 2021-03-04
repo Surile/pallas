@@ -27,7 +27,7 @@ module.exports = class HelloService extends Service {
       .limit(perPage)
       .skip(perPage * page)
       .get()
-      
+
     return {
       data: result.data,
       total: res.total,

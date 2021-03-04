@@ -1,25 +1,25 @@
 {
-	"pages": [ 
-		{
-			"path": "pages/index/index"
-		},
-		{
-			"path":"pages/detail/index"
-		},
-		{
-			"path":"pages/list/index"
-		}
-	],
-	"globalStyle": {
-		"navigationStyle":"custom"
-	},
-	"topWindow": {
-		"path": "windows/top-window.vue",
-		"style": {
-			"height": "60px"
-		},
-		"matchMedia": {
-			"minWidth": 20
-		}
-	}
+  "pages": [
+    {
+      "path": "pages/index/index"
+    },
+    {
+      "path": "pages/detail/index"
+    },
+    {
+      "path": "pages/list/index"
+    }
+  ],
+  "globalStyle": {
+    "navigationStyle": "custom"
+  },
+  "topWindow": {
+    "path": "windows/top-window.vue",
+    "style": {
+      "height": "60px"
+    },
+    "matchMedia": {
+      "minWidth": 20
+    }
+  }
 }
