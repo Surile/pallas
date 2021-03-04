@@ -1575,7 +1575,6 @@
   resolved "https://registry.yarnpkg.com/@types/clipboard/-/clipboard-2.0.1.tgz#75a74086c293d75b12bc93ff13bc7797fef05a40"
   integrity sha512-gJJX9Jjdt3bIAePQRRjYWG20dIhAgEqonguyHxXuqALxsoDsDLimihqrSg8fXgVTJ4KZCzkfglKtwsh/8dLfbA==
 
-<<<<<<< HEAD
 "@types/connect-history-api-fallback@*":
   version "1.3.3"
   resolved "https://registry.npm.taobao.org/@types/connect-history-api-fallback/download/@types/connect-history-api-fallback-1.3.3.tgz?cache=0&sync_timestamp=1613378229007&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40types%2Fconnect-history-api-fallback%2Fdownload%2F%40types%2Fconnect-history-api-fallback-1.3.3.tgz#4772b79b8b53185f0f4c9deab09236baf76ee3b4"
@@ -3545,8 +3544,6 @@ cli-truncate@^2.1.0:
     slice-ansi "^3.0.0"
     string-width "^4.2.0"
 
-=======
->>>>>>> 9c969e1 (ts 支持)
 clipboard@^2.0.6:
   version "2.0.6"
   resolved "https://registry.yarnpkg.com/clipboard/-/clipboard-2.0.6.tgz#52921296eec0fdf77ead1749421b21c968647376"
@@ -11321,7 +11318,6 @@ tiny-emitter@^2.0.0:
   resolved "https://registry.yarnpkg.com/tiny-emitter/-/tiny-emitter-2.1.0.tgz#1d1a56edfc51c43e863cbb5382a72330e3555423"
   integrity sha512-NB6Dk1A9xgQPMoGqC5CVXn123gWyte215ONT5Pp5a0yt4nlEoO1ZWeCwpncaekPHXO60i47ihFnZPiRPjRMq4Q==
 
-<<<<<<< HEAD
 tmpl@1.0.x:
   version "1.0.4"
   resolved "https://registry.npm.taobao.org/tmpl/download/tmpl-1.0.4.tgz#23640dd7b42d00433911140820e5cf440e521dd1"
@@ -11784,6 +11780,11 @@ uuid@^3.3.2, uuid@^3.4.0:
   version "3.4.0"
   resolved "https://registry.npm.taobao.org/uuid/download/uuid-3.4.0.tgz?cache=0&sync_timestamp=1607460052228&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fuuid%2Fdownload%2Fuuid-3.4.0.tgz#b23e4358afa8a202fe7a100af1f5f883f02007ee"
   integrity sha1-sj5DWK+oogL+ehAK8fX4g/AgB+4=
+
+uview-ui@^1.8.3:
+  version "1.8.3"
+  resolved "https://registry.yarnpkg.com/uview-ui/-/uview-ui-1.8.3.tgz#c2602a6bf7b3eef603fd632959eb3450ad4a0b9b"
+  integrity sha512-DqKc+qRrOZLPcyfWv4b0HspSS9n1Cd6BbgKiYEv9rjTAnWoqJV7rXsvWqZdr5iKGP5EMNbNS741GLNw4sIHbpw==
 
 v8-compile-cache@^2.0.3:
   version "2.2.0"
@@ -12408,9 +12409,3 @@ yorkie@^2.0.0:
     is-ci "^1.0.10"
     normalize-path "^1.0.0"
     strip-indent "^2.0.0"
-=======
-uview-ui@^1.8.3:
-  version "1.8.3"
-  resolved "https://registry.yarnpkg.com/uview-ui/-/uview-ui-1.8.3.tgz#c2602a6bf7b3eef603fd632959eb3450ad4a0b9b"
-  integrity sha512-DqKc+qRrOZLPcyfWv4b0HspSS9n1Cd6BbgKiYEv9rjTAnWoqJV7rXsvWqZdr5iKGP5EMNbNS741GLNw4sIHbpw==
->>>>>>> 9c969e1 (ts 支持)

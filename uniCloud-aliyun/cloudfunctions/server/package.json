@@ -4,8 +4,8 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
+    "nodemailer": "^6.5.0",
     "uni-cloud-router": "^0.0.9",
-    "uni-id": "file:../../../uni_modules/uni-id/uniCloud/cloudfunctions/common/uni-id",
-    "nodemailer": "^6.5.0"
+    "uni-id": "file:../../../src/uni_modules/uni-id/uniCloud/cloudfunctions/common/uni-id"
   }
 }

@@ -8,10 +8,10 @@
         <template v-slot:upload>
           <view
             @click="onPreviewImage"
-            :data-url="data?.imgSrc"
+            :data-url="data.imgSrc"
             class="image_view ty-row ty-row__direction--column ty-row__align--center tr-row__justify--center"
           >
-            <image class="image" mode="aspectFit" :src="data?.imgSrc"></image>
+            <image class="image" mode="aspectFit" :src="data.imgSrc"></image>
           </view>
         </template>
         <template v-slot:code>
@@ -26,17 +26,17 @@
               >
             </view>
             <view v-if="activeIndex === 0" class="code-content">
-              <Input name="图片链接：" :value="data?.imgSrc" />
-              <Input name="下载链接：" :value="data?.imgSrc" />
+              <Input name="图片链接：" :value="data.imgSrc" />
+              <Input name="下载链接：" :value="data.imgSrc" />
             </view>
             <view v-if="activeIndex === 1" class="code-content">
               <Input
                 name="HTML代码："
-                :value="'<img src=' + data?.imgSrc + ' />'"
+                :value="'<img src=' + data.imgSrc + ' />'"
               />
               <Input
                 name="Markdown："
-                :value="'![' + data?._id + '](' + data?.imgSrc + ')'"
+                :value="'![' + data._id + '](' + data.imgSrc + ')'"
               />
             </view>
             <view
@@ -46,9 +46,9 @@
               <view class="remove-btn" @click="onRemoveImage">删除文件</view>
             </view>
             <!-- 							<view v-if="activeIndex === 3" class="code-content">
-								<Input name="图片链接：" value="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-f50391d2-9b7a-49f5-8bbb-7f2c6d5f7b8d/08f834a5-bd70-4e74-a5ee-d07c83e32abc.png" />								
-								<Input name="下载链接：" value="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-f50391d2-9b7a-49f5-8bbb-7f2c6d5f7b8d/08f834a5-bd70-4e74-a5ee-d07c83e32abc.png" />							
-							</view> -->
+									<Input name="图片链接：" value="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-f50391d2-9b7a-49f5-8bbb-7f2c6d5f7b8d/08f834a5-bd70-4e74-a5ee-d07c83e32abc.png" />								
+									<Input name="下载链接：" value="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-f50391d2-9b7a-49f5-8bbb-7f2c6d5f7b8d/08f834a5-bd70-4e74-a5ee-d07c83e32abc.png" />							
+								</view> -->
           </view>
         </template>
         <template v-slot:tips>
@@ -74,7 +74,7 @@ import { DetailData } from '@/type'
   },
 })
 export default class Detail extends Vue {
-  public activeIndex: Number = 10
+  public activeIndex = 10
   public menuList: Array<{ name: string }> = [
     {
       name: '文件外链',
