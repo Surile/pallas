@@ -38,27 +38,32 @@ export default class Index extends Vue {
 
 
 
-    
+
+
+
+
+
+
     uni.chooseImage({
       sizeType: ['original'],
       success: (res: any) => {
         if (!res.tempFilePaths.length) {
-          return
+                                return
         }
 
         res.tempFiles.map(async (item: any) => {
-          await that.onUploadFile(item)
-        })
-      },
+                   await that.onUploadFile(item)
+             })
+       },
     })
-  }
+  }       
   async onUploadFile(file: any) {
-    uni.showLoading({
+       uni.showLoading({
       mask: true,
     })
 
     const res = await uniCloud.uploadFile({
-      filePath: file.path,
+            filePath: file.path,
       cloudPath: file.name,
     })
 
