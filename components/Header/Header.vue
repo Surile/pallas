@@ -64,7 +64,7 @@ export default {
 .navbar-container{
 	color: rgba(255,255,255,.84);
 	background:$color-brand;
-	padding: 0 135px;
+	// padding: 0 135px;
 	font-weight: 300;
 	margin-bottom: 20px;
 	.navbar-header{
