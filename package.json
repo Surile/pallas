@@ -101,8 +101,10 @@
     "typescript": "^3.0.0",
     "vue-template-compiler": "^2.6.11"
   },
-  "hooks": {
-    "pre-commit": "lint-staged"
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "lint-staged": {
     "*.{js,vue,json,graphql,md,ts}": [
