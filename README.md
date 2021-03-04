@@ -1,11 +1,23 @@
 # pallas
 
-# 运行
+## Project setup
 
-# 帮助
+```
+yarn install
+```
 
-# 错误码
+### Compiles and hot-reloads for development
 
-0 成功
-70001 参数不能为空
-70002 参数错误
+```
+yarn serve
+```
+
+### Compiles and minifies for production
+
+```
+yarn build
+```
+
+### Customize configuration
+
+See [Configuration Reference](https://cli.vuejs.org/config/).

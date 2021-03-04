@@ -1,0 +1,5 @@
+export { default as BaseLayout } from './BaseLayout/index.vue'
+export { default as Header } from './Header/index.vue'
+export { default as Footer } from './Footer/index.vue'
+export { default as Input } from './Input/index.vue'
+export { default as Card } from './Card/index.vue'
