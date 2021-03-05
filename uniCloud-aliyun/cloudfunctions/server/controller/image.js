@@ -20,4 +20,7 @@ module.exports = class ImageController extends Controller {
     const { id } = this.ctx.data
     return this.service.image.detail(id)
   }
+  scan() {
+    return this.service.image.scan(this.ctx.data)
+  }
 }

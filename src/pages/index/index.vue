@@ -5,7 +5,9 @@
         <template v-slot:upload>
           <view class="content">
             <view class="tips-text">选择一个文件上传</view>
-            <button class="upload-btn" @:click="onChooseImage">立即上传</button>
+            <button class="upload-btn" v-on:click="onChooseImage">
+              立即上传
+            </button>
           </view>
         </template>
         <template v-slot:tips>
@@ -33,18 +35,46 @@ import { BaseLayout, Card } from '@/components'
 export default class Index extends Vue {
   onChooseImage() {
     uni.chooseImage({
-      sizeType: ['original'],
+      // count: 1,
+      sizeType: ['compressed'],
       success: (res: any) => {
         if (!res.tempFilePaths.length) {
           return
         }
-
         res.tempFiles.map(async (item: any) => {
           await this.onUploadFile(item)
         })
       },
     })
   }
+
+  // 图片审核
+  onScan(data: string) {
+    uniCloud
+      .callFunction({
+        name: 'server',
+        data: {
+          action: 'image/scan',
+          data: {
+            url: data,
+          },
+        },
+      })
+      .then((result: any) => {
+        console.log(result)
+        if (result.result.code !== 0) {
+          uni.hideLoading()
+          uni.showModal({
+            content: result.result.message,
+            showCancel: false,
+            confirmColor: '#009688',
+          })
+        } else {
+          this.onAddImage(data)
+        }
+      })
+  }
+
   async onUploadFile(file: any) {
     uni.showLoading({
       mask: true,
@@ -55,13 +85,17 @@ export default class Index extends Vue {
       cloudPath: file.name,
     })
 
+    this.onScan(res.fileID)
+  }
+
+  onAddImage(url: string) {
     uniCloud
       .callFunction({
         name: 'server',
         data: {
           action: 'image/add',
           data: {
-            url: res.fileID,
+            url,
           },
         },
       })

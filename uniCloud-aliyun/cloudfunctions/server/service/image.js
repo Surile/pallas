@@ -4,6 +4,7 @@
  * @Description: Do not edit
  */
 const Service = require('uni-cloud-router').Service
+const ImageScan = require('../common/baiduAI')
 
 module.exports = class HelloService extends Service {
   // 数据库
@@ -67,5 +68,31 @@ module.exports = class HelloService extends Service {
     }
 
     return this._collection().doc(id).get()
+  }
+  // 图片审核
+  async scan(data) {
+    const { url } = data
+    if (!url) {
+      return {
+        code: 70001,
+        message: '参数不能为空',
+      }
+    }
+    const result = await ImageScan(url)
+    console.log('await ImageScan(url)', result)
+
+    if (result.conclusionType === 2) {
+      uniCloud.deleteFile({
+        fileList: [url],
+      })
+      return {
+        code: 70003,
+        message: '该图片已违规，已自动删除',
+      }
+    }
+
+    return {
+      code: 0,
+    }
   }
 }

@@ -1,4 +1,4 @@
 export type DetailData = {
-  _id: number
+  _id: number | string
   imgSrc: string
 }

@@ -74,7 +74,7 @@ import { DetailData } from '@/type'
   },
 })
 export default class Detail extends Vue {
-  public activeIndex = 10
+  public activeIndex = 0
   public menuList: Array<{ name: string }> = [
     {
       name: '文件外链',
@@ -89,7 +89,7 @@ export default class Detail extends Vue {
       name: '管理',
     },
   ]
-  public data: DetailData | null = null
+  public data: DetailData = { _id: '', imgSrc: '' }
 
   onLoad(options: { id: number }) {
     uniCloud
@@ -103,6 +103,7 @@ export default class Detail extends Vue {
         },
       })
       .then((data: any) => {
+        console.log(data)
         this.data = data.result.data[0]
       })
   }
