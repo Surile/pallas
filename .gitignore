@@ -3,6 +3,7 @@ node_modules/
 unpackage/
 dist/
 .hbuilderx/
+uniCloud-aliyun/cloudfunctions/server/node_modules
 
 # local env files
 .env.local
